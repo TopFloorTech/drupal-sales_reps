@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function sales_reps_entity_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+  if ($entity->getEntityTypeId() == 'sales_rep') {
+    if (isset($build['field_form'][0])) {
+      /** @var \Drupal\Core\Url $url */
+      $url = $build['field_form'][0]['#url'];
+      $url->setOption('query', [
+        'edit[field_sales_rep]' => $entity->id(),
+      ]);
+    }
+  }
+}

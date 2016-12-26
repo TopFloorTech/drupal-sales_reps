@@ -1,0 +1,8 @@
+{
+  "name": "drupal/sales_reps",
+  "type": "drupal-module",
+  "description": "Creates a Sales Rep entity type and related functionality.",
+  "homepage": "https://github.com/TopFloorTech/drupal-sales_reps",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev"
+}
